@@ -84,7 +84,6 @@ Classes and Functions
 """
 from __future__ import print_function
 
-import numpy as np
 import sys
 import os
 import os.path
@@ -92,17 +91,19 @@ import errno
 import cPickle
 import warnings
 
+import numpy as np
+
 try:
-    from gridData import Grid  # http://github.com/orbeckst/GridDataFormats
+    from gridData import Grid
 except ImportError:
     raise ImportError(
         """ERROR --- The GridDataFormats package can not be found!
 
         The 'gridData' module from GridDataFormats could not be
         imported. Please install it first.  You can try installing with
-        setuptools directly from the internet:
+        directly from the internet:
 
-          easy_install GridDataFormats
+         pip install GridDataFormats
 
         Alternatively, download the package from
 
